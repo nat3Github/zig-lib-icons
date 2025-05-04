@@ -1,0 +1,103 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (12 17)
+        (
+          (vert - 21)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (14.305 7.53)
+        (
+          (line - 15.228001 7.1480002)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15.228 4.852)
+        (
+          (line - 14.304999 4.4690003)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16.852 3.228)
+        (
+          (line - 16.469 2.304)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16.852 8.772)
+        (
+          (line - 16.469 9.695001)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (19.148 3.228)
+        (
+          (line - 19.531 2.304)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (19.53 9.696)
+        (
+          (line - 19.148 8.772)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.772 4.852)
+        (
+          (line - 21.696 4.4690003)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.772 7.148)
+        (
+          (line - 21.696 7.5309997)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (22 13)
+        (
+          (vert - 15)
+          (arc_ellipse - 2 2 0 false false (20 17))
+          (horiz - 4)
+          (arc_ellipse - 2 2 0 false false (2 15))
+          (vert - 5)
+          (arc_ellipse - 2 2 0 false false (4 3))
+          (horiz - 11)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8 21)
+        (
+          (horiz - 16)
+        )
+      )
+    )
+(outline_fill_path (flat 1) (flat 0) 1 ((18 3) ((arc_circle - 3 false false (18 9))(arc_circle - 3 false false (18 3)))))  )
+)

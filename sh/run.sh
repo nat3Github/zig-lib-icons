@@ -1,0 +1,104 @@
+#!/bin/bash
+
+
+# decls:
+
+# base_path="/Users/nat3/programming/zig/lib/icons"
+base_path=".."
+path_tvgt="$base_path/tvgt"
+path_tvg="$base_path/tvg"
+path_svg="$base_path/svg"
+
+feather="feather"
+herooutline="heroicons/outline"
+herosolid="heroicons/solid"
+lucide="lucide"
+
+setup() {
+  mkdir -p $path_tvg/"$1"
+  mkdir -p $path_tvgt/"$1"
+}
+
+svg2tvgt__() {
+    # wrapper for svg2tvg tool from https://github.com/TinyVG/sdk
+    /Users/nat3/Apps/svg2tvg/bin/svg2tvgt $1
+}
+
+tvgt2tvg__() {
+    # wrapper for tvgt conversion tool from https://github.com/TinyVG/sdk
+    tvg-text -I tvgt $1 -O tvg
+}
+
+svg_conv() {
+# Loop through all SVG files in the current directory
+var_dir=$1
+for file in "$path_svg"/"$var_dir"/*.svg; do
+  # Check if the file exists (in case no SVG files match)
+  if [[ -f "$file" ]]; then
+    svg2tvgt__ "$(realpath "$file")"
+  fi
+done
+
+#copy them to tvgt
+find "$path_svg"/"$var_dir"/*.tvgt -exec mv {} $path_tvgt/"$var_dir"/ \; 
+
+for file in "$path_tvgt"/"$var_dir"/*.tvgt; do
+  if [[ -f "$file" ]]; then
+    var_p="$(realpath "$file")"
+    tvgt2tvg__ $var_p
+  fi
+done
+
+#copy them to tvg
+find "$path_tvgt"/"$var_dir"/*.tvg -exec mv {} $path_tvg/"$var_dir"/ \; 
+}
+
+
+srcgen(){
+var_dir=$1
+zig_file1="$var_dir".zig
+zig_file2="${zig_file1//\//-}"
+zig_file="$base_path"/src/"$zig_file2"
+# str_no_slash="${zig_file//\//}" 
+touch "$zig_file"
+for file in "$path_tvg"/"$var_dir"/*.tvg; do
+  if [[ -f "$file" ]]; then
+   withoutsfx=$(basename "$file")
+   withoutsfx="${withoutsfx%.*}"
+   zig_str=$(zig_decl "$var_dir" "$withoutsfx")
+  #  echo "$zig_str"
+   echo "$zig_str" >> "$zig_file" 
+  fi
+done
+}
+
+zig_decl () {
+  folder=$1
+  name=$2
+  embedf="@embedFile(\"../tvgt/$folder/$name.tvg\");"
+  pubconst="pub const @\"$name\" = "
+  echo "$pubconst""$embedf"
+}
+
+
+arr=("$feather" "$herosolid" "$herooutline" "$lucide")
+
+run() {
+  for k in "${arr[@]}"; do
+  setup "$k"
+  svg_conv "$k"
+done
+only_src_gen
+}
+only_src_gen() {
+  for k in "${arr[@]}"; do
+  srcgen "$k"
+  echo "$k"
+done
+}
+
+# echo $(zig_decl "feather" "myicon");
+# only_src_gen
+run
+
+

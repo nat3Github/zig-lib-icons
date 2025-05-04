@@ -1,0 +1,69 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15.536 11.293)
+        (
+          (arc_ellipse - 1 1 0 false true (15.536 12.707001))
+          (line - 17.912 15.084001)
+          (arc_ellipse - 1 1 0 false true (19.326 15.084001))
+          (line - 21.703001 12.707001)
+          (arc_ellipse - 1 1 0 false true (21.703001 11.293001))
+          (line - 19.326 8.916001)
+          (arc_ellipse - 1 1 0 false true (17.912 8.916001))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2.297 11.293)
+        (
+          (arc_ellipse - 1 1 0 false true (2.297 12.707001))
+          (line - 4.674 15.084001)
+          (arc_ellipse - 1 1 0 false true (6.088 15.084001))
+          (line - 8.465 12.707001)
+          (arc_ellipse - 1 1 0 false true (8.465 11.293001))
+          (line - 6.088 8.916)
+          (arc_ellipse - 1 1 0 false true (4.674 8.916))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8.916 17.912)
+        (
+          (arc_ellipse - 1 1 0 false true (8.916 19.327))
+          (line - 11.293 21.703)
+          (arc_ellipse - 1 1 0 false true (12.707001 21.703))
+          (line - 15.084001 19.327)
+          (arc_ellipse - 1 1 0 false true (15.084001 17.911999))
+          (line - 12.707001 15.535999)
+          (arc_ellipse - 1 1 0 false true (11.293001 15.535999))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8.916 4.674)
+        (
+          (arc_ellipse - 1 1 0 false true (8.916 6.088))
+          (line - 11.293 8.464)
+          (arc_ellipse - 1 1 0 false true (12.707001 8.464))
+          (line - 15.084001 6.088)
+          (arc_ellipse - 1 1 0 false true (15.084001 4.674))
+          (line - 12.707001 2.2969997)
+          (arc_ellipse - 1 1 0 false true (11.293001 2.2969997))
+          (close -)
+        )
+      )
+    )
+  )
+)

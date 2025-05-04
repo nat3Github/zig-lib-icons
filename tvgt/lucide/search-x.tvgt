@@ -1,0 +1,33 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (13.5 8.5)
+        (
+          (line - 8.5 13.5)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8.5 8.5)
+        (
+          (line - 13.5 13.5)
+        )
+      )
+    )
+(outline_fill_path (flat 1) (flat 0) 1 ((11 3) ((arc_circle - 8 false false (11 19))(arc_circle - 8 false false (11 3)))))    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (21 21)
+        (
+          (line - 16.7 16.7)
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,76 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2 7)
+        (
+          (line - 6.41 2.5900002)
+          (arc_ellipse - 2 2 0 false false (7.83 2))
+          (horiz - 16.17)
+          (arc_ellipse - 2 2 0 false false (17.59 2.59))
+          (line - 22 7)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (4 12)
+        (
+          (vert - 20)
+          (arc_ellipse - 2 2 0 false true (6 22))
+          (horiz - 18)
+          (arc_ellipse - 2 2 0 false true (20 20))
+          (vert - 12)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15 22)
+        (
+          (vert - 18)
+          (arc_ellipse - 2 2 0 false true (13 16))
+          (horiz - 11)
+          (arc_ellipse - 2 2 0 false true (9 18))
+          (vert - 22)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2 7)
+        (
+          (horiz - 22)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (22 7)
+        (
+          (vert - 10)
+          (arc_ellipse - 2 2 0 false false (20 12))
+          (arc_ellipse - 2.7 2.7 0 false false (18.41 11.37))
+          (arc_ellipse - 0.7 0.7 0 false true (17.59 11.37))
+          (arc_ellipse - 2.7 2.7 0 false false (16 12))
+          (arc_ellipse - 2.7 2.7 0 false false (14.41 11.37))
+          (arc_ellipse - 0.7 0.7 0 false true (13.59 11.37))
+          (arc_ellipse - 2.7 2.7 0 false false (12 12))
+          (arc_ellipse - 2.7 2.7 0 false false (10.41 11.37))
+          (arc_ellipse - 0.7 0.7 0 false true (9.59 11.37))
+          (arc_ellipse - 2.7 2.7 0 false false (8 12))
+          (arc_ellipse - 2.7 2.7 0 false false (6.41 11.37))
+          (arc_ellipse - 0.7 0.7 0 false true (5.5899997 11.37))
+          (arc_ellipse - 2.7 2.7 0 false false (4 12))
+          (arc_ellipse - 2 2 0 false false (2 10))
+          (vert - 7)
+        )
+      )
+    )
+  )
+)

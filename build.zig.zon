@@ -1,0 +1,17 @@
+.{
+    .fingerprint = 0xa6a507ef9409c88,
+
+    .name = .icons,
+
+    .version = "0.0.0",
+
+    .dependencies = .{},
+
+    .paths = .{
+        "assets",
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "svg",
+    },
+}

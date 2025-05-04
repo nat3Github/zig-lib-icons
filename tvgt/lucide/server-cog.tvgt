@@ -1,0 +1,123 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (10.852 14.772)
+        (
+          (line - 10.469 15.695001)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (13.148 14.772)
+        (
+          (arc_ellipse - 3 3 0 true true (10.851999 9.228001))
+          (line - 10.468999 8.305)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (13.148 9.228)
+        (
+          (line - 13.531 8.304999)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (13.53 15.696)
+        (
+          (line - 13.148 14.772)
+          (arc_ellipse - 3 3 0 true false (10.851999 9.228001))
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (14.772 10.852)
+        (
+          (line - 15.695001 10.469)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (14.772 13.148)
+        (
+          (line - 15.695001 13.531)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (4.5 10)
+        (
+          (horiz - 4)
+          (arc_ellipse - 2 2 0 false false (2 8))
+          (vert - 4)
+          (arc_ellipse - 2 2 0 false false (4 2))
+          (horiz - 20)
+          (arc_ellipse - 2 2 0 false false (22 4))
+          (vert - 8)
+          (arc_ellipse - 2 2 0 false false (20 10))
+          (horiz - 19.5)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (4.5 14)
+        (
+          (horiz - 4)
+          (arc_ellipse - 2 2 0 false true (2 16))
+          (vert - 20)
+          (arc_ellipse - 2 2 0 false true (4 22))
+          (horiz - 20)
+          (arc_ellipse - 2 2 0 false true (22 20))
+          (vert - 16)
+          (arc_ellipse - 2 2 0 false true (20 14))
+          (horiz - 19.5)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (6 18)
+        (
+          (horiz - 6.01)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (6 6)
+        (
+          (horiz - 6.01)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (9.228 10.852)
+        (
+          (line - 8.304999 10.469)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (9.228 13.148)
+        (
+          (line - 8.304999 13.531)
+        )
+      )
+    )
+  )
+)

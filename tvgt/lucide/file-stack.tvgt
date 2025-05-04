@@ -1,0 +1,56 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (21 7)
+        (
+          (horiz - 18)
+          (arc_ellipse - 2 2 0 false false (16 5))
+          (vert - 2)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (21 6)
+        (
+          (vert - 12.5)
+          (bezier - (21 13.3) (20.3 14) (19.5 14))
+          (horiz - 12.5)
+          (bezier - (11.7 14) (11 13.3) (11 12.5))
+          (vert - 3.5)
+          (bezier - (11 2.7) (11.7 2) (12.5 2))
+          (horiz - 17)
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (7 8)
+        (
+          (vert - 16.8)
+          (bezier - (7 17.099998) (7.2 17.4) (7.4 17.599998))
+          (bezier - (7.6 17.8) (7.9 17.999998) (8.2 17.999998))
+          (horiz - 15)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (3 12)
+        (
+          (vert - 20.8)
+          (bezier - (3 21.099998) (3.2 21.4) (3.4 21.599998))
+          (bezier - (3.6000001 21.8) (3.9 21.999998) (4.2000003 21.999998))
+          (horiz - 11)
+        )
+      )
+    )
+  )
+)

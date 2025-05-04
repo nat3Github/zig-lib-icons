@@ -1,0 +1,37 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (10 12)
+        (
+          (horiz - 10.01)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (18 20)
+        (
+          (vert - 6)
+          (arc_ellipse - 2 2 0 false true (16 4))
+          (horiz - 8)
+          (arc_ellipse - 2 2 0 false true (6 6))
+          (vert - 20)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2 20)
+        (
+          (horiz - 22)
+        )
+      )
+    )
+  )
+)

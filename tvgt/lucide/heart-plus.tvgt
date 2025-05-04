@@ -1,0 +1,39 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (13.5 19.5)
+        (
+          (line - 12 21)
+          (line - 5 14)
+          (bezier - (3.5 12.55) (2 10.8) (2 8.5))
+          (arc_ellipse - 5.5 5.5 0 false false (7.5 3))
+          (bezier - (9.26 3) (10.5 3.5) (12 5))
+          (bezier - (13.5 3.5) (14.74 3) (16.5 3))
+          (arc_ellipse - 5.5 5.5 0 false false (21.902 9.5))
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15 15)
+        (
+          (horiz - 21)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (18 12)
+        (
+          (vert - 18)
+        )
+      )
+    )
+  )
+)

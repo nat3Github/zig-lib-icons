@@ -1,0 +1,111 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15.228 16.852)
+        (
+          (line - 14.304999 16.469)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (15.228 19.148)
+        (
+          (line - 14.304999 19.531)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16 2)
+        (
+          (vert - 6)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16.47 14.305)
+        (
+          (line - 16.852 15.228001)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16.852 20.772)
+        (
+          (line - 16.469 21.696)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (19.148 15.228)
+        (
+          (line - 19.531 14.304999)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (19.53 21.696)
+        (
+          (line - 19.148 20.772)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.772 16.852)
+        (
+          (line - 21.696 16.469)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.772 19.148)
+        (
+          (line - 21.696 19.531)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (21 11)
+        (
+          (vert - 6)
+          (arc_ellipse - 2 2 0 false true (19 4))
+          (horiz - 5)
+          (arc_ellipse - 2 2 0 false true (3 6))
+          (vert - 20)
+          (arc_ellipse - 2 2 0 false true (5 22))
+          (horiz - 11)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (3 10)
+        (
+          (horiz - 21)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8 2)
+        (
+          (vert - 6)
+        )
+      )
+    )
+(outline_fill_path (flat 1) (flat 0) 1 ((18 15) ((arc_circle - 3 false false (18 21))(arc_circle - 3 false false (18 15)))))  )
+)

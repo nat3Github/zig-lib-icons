@@ -1,0 +1,35 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (18 16)
+        (
+          (line - 22 12)
+          (line - 18 8)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (6 8)
+        (
+          (line - 2 12)
+          (line - 6 16)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (14.5 4)
+        (
+          (line - 9.5 20)
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,125 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (12 20)
+        (
+          (arc_ellipse - 8 8 0 true true (12 4))
+          (arc_ellipse - 8 8 0 false true (12 20))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (12 14)
+        (
+          (arc_ellipse - 2 2 0 true true (12 10))
+          (arc_ellipse - 2 2 0 false true (12 14))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (12 2)
+        (
+          (vert - 4)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (12 22)
+        (
+          (vert - 20)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (17 20.66)
+        (
+          (line - 16 18.93)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (11 10.27)
+        (
+          (line - 7 3.34)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.66 17)
+        (
+          (line - 18.93 16)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (3.34 7)
+        (
+          (line - 5.0699997 8)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (14 12)
+        (
+          (horiz - 22)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2 12)
+        (
+          (horiz - 4)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20.66 7)
+        (
+          (line - 18.93 8)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (3.34 17)
+        (
+          (line - 5.0699997 16)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (17 3.34)
+        (
+          (line - 16 5.0699997)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (11 13.73)
+        (
+          (line - 7 20.66)
+        )
+      )
+    )
+  )
+)

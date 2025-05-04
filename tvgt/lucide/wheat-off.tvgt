@@ -1,0 +1,113 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+    (0 0 0)
+  )
+  (
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (2 22)
+        (
+          (line - 12 12)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16 8)
+        (
+          (line - 14.83 9.17)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (3.47 12.53)
+        (
+          (line - 5 11)
+          (line - 6.5299997 12.53)
+          (arc_ellipse - 3.5 3.5 0 false false (6.5299997 17.47))
+          (line - 5 19)
+          (line - 3.47 17.47)
+          (arc_ellipse - 3.5 3.5 0 false false (3.47 12.529999))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (8 8)
+        (
+          (line - 7.4700003 8.53)
+          (arc_ellipse - 3.5 3.5 0 false true (7.4700003 13.469999))
+          (line - 9 15)
+          (line - 10.53 13.47)
+          (bezier - (11.08 12.92) (11.41 12.22) (11.51 11.5))
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (10.91 5.26)
+        (
+          (bezier - (11.059999 5) (11.25 4.75) (11.47 4.53))
+          (line - 13 3)
+          (line - 14.53 4.5299997)
+          (arc_ellipse - 3.5 3.5 0 false false (14.809999 9.15))
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (20 2)
+        (
+          (horiz - 22)
+          (vert - 4)
+          (arc_ellipse - 4 4 0 false false (18 8))
+          (horiz - 16)
+          (vert - 6)
+          (arc_ellipse - 4 4 0 false false (20 2))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (11.47 17.47)
+        (
+          (line - 13 19)
+          (line - 11.47 20.53)
+          (arc_ellipse - 3.5 3.5 0 false false (6.53 20.53))
+          (line - 5 19)
+          (line - 6.5299997 17.47)
+          (arc_ellipse - 3.5 3.5 0 false false (11.469999 17.47))
+          (close -)
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (16 16)
+        (
+          (line - 15.47 16.53)
+          (arc_ellipse - 3.5 3.5 0 false false (10.530001 16.53))
+          (line - 9 15)
+          (line - 10.53 13.47)
+          (arc_ellipse - 3.49 3.49 0 false false (12.5 12.49))
+        )
+      )
+    )
+    (outline_fill_path (flat 1) (flat 0) 1
+      (
+        (18.74 13.09)
+        (
+          (bezier - (19 12.940001) (19.25 12.75) (19.47 12.53))
+          (line - 21 11)
+          (line - 19.47 9.47)
+          (arc_ellipse - 3.5 3.5 0 false true (14.849999 9.190001))
+        )
+      )
+    )
+  )
+)
