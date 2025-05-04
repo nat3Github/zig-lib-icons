@@ -78,7 +78,7 @@ done
 zig_decl () {
   folder=$1
   name=$2
-  embedf="@embedFile(\"tvgt/$folder/$name.tvg\");"
+  embedf="@embedFile(\"tvg/$folder/$name.tvg\");"
   pubconst="pub const @\"$name\" = "
   echo "$pubconst""$embedf"
 }
