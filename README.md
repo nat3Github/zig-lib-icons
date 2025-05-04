@@ -20,4 +20,5 @@
 
 # Contribution
 - there is a automated shell script to convert and generate zig code
+- modify it to generate the new files, modify root.zig
 - i will only accept icon libraries licensed similar to MIT
