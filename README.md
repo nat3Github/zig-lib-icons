@@ -1,6 +1,7 @@
 # TVG Icons Ready to use in Zig
 
 - iconst are mostly in svg
+- sometimes you need them in tvg (tiny vector graphics https://github.com/TinyVG/sdk)
 - this lib provides the convertet tvg files
 - each tvg icon is embedded via @embedFile(...)
 - use it via feather.@"icon-name"
