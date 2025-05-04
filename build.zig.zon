@@ -12,6 +12,8 @@
         "build.zig",
         "build.zig.zon",
         "src",
+        "tvg",
+        "tvgt",
         "svg",
     },
 }

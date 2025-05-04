@@ -1,13 +1,15 @@
 #!/bin/bash
 
 
-# decls:
+# Note: you must cd into icons and then run ./sh/run.sh
 
+# decls:
 # base_path="/Users/nat3/programming/zig/lib/icons"
-base_path=".."
-path_tvgt="$base_path/tvgt"
-path_tvg="$base_path/tvg"
-path_svg="$base_path/svg"
+base_path=""
+path_src="src"
+path_tvgt="src/tvgt"
+path_tvg="src/tvg"
+path_svg="src/svg"
 
 feather="feather"
 herooutline="heroicons/outline"
@@ -58,15 +60,16 @@ srcgen(){
 var_dir=$1
 zig_file1="$var_dir".zig
 zig_file2="${zig_file1//\//-}"
-zig_file="$base_path"/src/"$zig_file2"
+zig_file="$path_src"/"$zig_file2"
 # str_no_slash="${zig_file//\//}" 
+rm "$zig_file"
 touch "$zig_file"
 for file in "$path_tvg"/"$var_dir"/*.tvg; do
   if [[ -f "$file" ]]; then
    withoutsfx=$(basename "$file")
    withoutsfx="${withoutsfx%.*}"
    zig_str=$(zig_decl "$var_dir" "$withoutsfx")
-  #  echo "$zig_str"
+   #  echo "$zig_str"
    echo "$zig_str" >> "$zig_file" 
   fi
 done
@@ -75,7 +78,7 @@ done
 zig_decl () {
   folder=$1
   name=$2
-  embedf="@embedFile(\"../tvgt/$folder/$name.tvg\");"
+  embedf="@embedFile(\"tvgt/$folder/$name.tvg\");"
   pubconst="pub const @\"$name\" = "
   echo "$pubconst""$embedf"
 }
