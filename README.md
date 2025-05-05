@@ -9,9 +9,7 @@
 # status of this library
 
 - zig 0.14.0
-- feather icon conversion looks horrible, unusable, waiting for better converter
-- lucid icon conversion also sometimes ugly
-- heroicons look the best
+- conversion quality is unfortunatly bad
 
 ## icon libraries included:
 
