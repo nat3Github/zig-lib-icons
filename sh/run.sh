@@ -99,14 +99,14 @@ done
 zig_decl_tvg () {
   folder=$1
   name=$2
-  embedf="@embedFile(\"tvg/$folder/$name.tvg\");"
+  embedf="@embedFile(\"../tvg/$folder/$name.tvg\");"
   pubconst="pub const @\"$name\" = "
   echo "$pubconst""$embedf"
 }
 zig_decl_svg () {
   folder=$1
   name=$2
-  embedf="@embedFile(\"svg/$folder/$name.svg\");"
+  embedf="@embedFile(\"../svg/$folder/$name.svg\");"
   pubconst="pub const @\"$name\" = "
   echo "$pubconst""$embedf"
 }
