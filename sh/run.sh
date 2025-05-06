@@ -56,11 +56,32 @@ find "$path_tvgt"/"$var_dir"/*.tvg -exec mv {} $path_tvg/"$var_dir"/ \;
 }
 
 
-srcgen(){
+srcgen_svg(){
 var_dir=$1
 zig_file1="$var_dir".zig
 zig_file2="${zig_file1//\//-}"
-zig_file="$path_src"/"$zig_file2"
+mkdir "$path_src"/embed-svg
+zig_file="$path_src"/embed-svg/"$zig_file2"
+# str_no_slash="${zig_file//\//}" 
+rm "$zig_file"
+touch "$zig_file"
+for file in "$path_svg"/"$var_dir"/*.svg; do
+  if [[ -f "$file" ]]; then
+   withoutsfx=$(basename "$file")
+   withoutsfx="${withoutsfx%.*}"
+   zig_str=$(zig_decl_svg "$var_dir" "$withoutsfx")
+   #  echo "$zig_str"
+   echo "$zig_str" >> "$zig_file" 
+  fi
+done
+}
+
+srcgen_tvg(){
+var_dir=$1
+zig_file1="$var_dir".zig
+zig_file2="${zig_file1//\//-}"
+mkdir "$path_src"/embed-tvg
+zig_file="$path_src"/embed-tvg/"$zig_file2"
 # str_no_slash="${zig_file//\//}" 
 rm "$zig_file"
 touch "$zig_file"
@@ -68,17 +89,24 @@ for file in "$path_tvg"/"$var_dir"/*.tvg; do
   if [[ -f "$file" ]]; then
    withoutsfx=$(basename "$file")
    withoutsfx="${withoutsfx%.*}"
-   zig_str=$(zig_decl "$var_dir" "$withoutsfx")
+   zig_str=$(zig_decl_tvg "$var_dir" "$withoutsfx")
    #  echo "$zig_str"
    echo "$zig_str" >> "$zig_file" 
   fi
 done
 }
 
-zig_decl () {
+zig_decl_tvg () {
   folder=$1
   name=$2
   embedf="@embedFile(\"tvg/$folder/$name.tvg\");"
+  pubconst="pub const @\"$name\" = "
+  echo "$pubconst""$embedf"
+}
+zig_decl_svg () {
+  folder=$1
+  name=$2
+  embedf="@embedFile(\"svg/$folder/$name.svg\");"
   pubconst="pub const @\"$name\" = "
   echo "$pubconst""$embedf"
 }
@@ -93,9 +121,11 @@ run() {
 done
 only_src_gen
 }
+
 only_src_gen() {
   for k in "${arr[@]}"; do
-  srcgen "$k"
+  srcgen_tvg "$k"
+  srcgen_svg "$k"
   echo "$k"
 done
 }
