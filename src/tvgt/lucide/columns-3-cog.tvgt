@@ -2,10 +2,9 @@
   (24 24 1/1024 u8888 default)
   (
     (1 0 1)
-    (0 0 0)
   )
   (
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (10.5 21)
         (
@@ -19,7 +18,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (14.3 19.6)
         (
@@ -27,7 +26,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (15 3)
         (
@@ -35,7 +34,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (15.2 16.9)
         (
@@ -43,7 +42,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (16.6 21.7)
         (
@@ -51,7 +50,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (16.8 15.3)
         (
@@ -59,7 +58,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (19.1 15.2)
         (
@@ -67,7 +66,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (19.6 21.7)
         (
@@ -75,7 +74,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (20.7 16.8)
         (
@@ -83,7 +82,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (21.7 19.4)
         (
@@ -91,7 +90,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (9 3)
         (
@@ -99,5 +98,5 @@
         )
       )
     )
-(outline_fill_path (flat 1) (flat 0) 1 ((18 15) ((arc_circle - 3 false false (18 21))(arc_circle - 3 false false (18 15)))))  )
+(draw_line_path (flat 0) 1 ((18 15) ((arc_circle - 3 false false (18 21))(arc_circle - 3 false false (18 15)))))  )
 )

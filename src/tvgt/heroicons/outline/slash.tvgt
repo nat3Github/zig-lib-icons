@@ -4,7 +4,7 @@
     (0 0 0)
   )
   (
-    (outline_fill_path (flat 0) (flat 0) 1.5
+    (draw_line_path (flat 0) 1.5
       (
         (9 20.2475)
         (

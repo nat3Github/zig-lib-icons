@@ -2,10 +2,9 @@
   (24 24 1/1024 u8888 default)
   (
     (0.05882353 0.09019608 0.16470589)
-    (0 0 0)
   )
   (
-    (outline_fill_path (flat 1) (flat 0) 1.5
+    (draw_line_path (flat 0) 1.5
       (
         (3 13.125)
         (
@@ -21,7 +20,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1.5
+    (draw_line_path (flat 0) 1.5
       (
         (9.75 8.625)
         (
@@ -37,7 +36,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1.5
+    (draw_line_path (flat 0) 1.5
       (
         (16.5 4.125)
         (

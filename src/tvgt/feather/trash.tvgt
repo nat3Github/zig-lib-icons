@@ -1,0 +1,28 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+  )
+  (
+    (draw_line_path (flat 0) 1
+      (
+        (19 6)
+        (
+          (vert - 20)
+          (arc_ellipse - 2 2 0 false false (17 22))
+          (horiz - 7)
+          (arc_ellipse - 2 2 0 false false (5 20))
+          (vert - 6)
+        )
+        (8 6)
+        (
+          (vert - 4)
+          (arc_ellipse - 2 2 0 false false (10 2))
+          (horiz - 14)
+          (arc_ellipse - 2 2 0 false false (16 4))
+          (vert - 6)
+        )
+      )
+    )
+  )
+)

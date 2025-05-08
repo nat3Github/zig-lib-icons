@@ -2,8 +2,7 @@
   (24 24 1/1024 u8888 default)
   (
     (1 0 1)
-    (0 0 0)
   )
   (
-(outline_fill_rectangles (flat 1) (flat 0) 1 ((3 3 7 7))(outline_fill_rectangles (flat 1) (flat 0) 1 ((14 3 7 7))(outline_fill_rectangles (flat 1) (flat 0) 1 ((14 14 7 7))(outline_fill_rectangles (flat 1) (flat 0) 1 ((3 14 7 7))  )
+  )
 )

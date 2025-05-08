@@ -2,10 +2,9 @@
   (24 24 1/1024 u8888 default)
   (
     (1 0 1)
-    (0 0 0)
   )
   (
-(outline_fill_polygon (flat 1) (flat 0) 1(
+(draw_line_loop (flat 0) 1(
 (10 4)
 (20 12)
 (10 20)

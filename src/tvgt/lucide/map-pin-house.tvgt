@@ -2,10 +2,9 @@
   (24 24 1/1024 u8888 default)
   (
     (1 0 1)
-    (0 0 0)
   )
   (
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (15 22)
         (
@@ -22,7 +21,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (18 10)
         (
@@ -32,7 +31,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (18 22)
         (
@@ -40,5 +39,5 @@
         )
       )
     )
-(outline_fill_path (flat 1) (flat 0) 1 ((10 7) ((arc_circle - 3 false false (10 13))(arc_circle - 3 false false (10 7)))))  )
+(draw_line_path (flat 0) 1 ((10 7) ((arc_circle - 3 false false (10 13))(arc_circle - 3 false false (10 7)))))  )
 )

@@ -1,0 +1,72 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+  )
+  (
+    (draw_line_path (flat 0) 1
+      (
+        (12 5)
+        (
+          (arc_ellipse - 3 3 0 true false (15 8))
+        )
+        (12 5)
+        (
+          (arc_ellipse - 3 3 0 true true (9 8))
+        )
+        (12 5)
+        (
+          (vert - 6)
+        )
+        (9 8)
+        (
+          (arc_ellipse - 3 3 0 true true (12 11))
+        )
+        (9 8)
+        (
+          (horiz - 10)
+        )
+        (15 8)
+        (
+          (arc_ellipse - 3 3 0 true false (12 11))
+        )
+        (15 8)
+        (
+          (horiz - 14)
+        )
+        (12 11)
+        (
+          (vert - 10)
+        )
+      )
+    )
+(draw_line_path (flat 0) 1 ((12 6) ((arc_circle - 2 false false (12 10))(arc_circle - 2 false false (12 6)))))    (draw_line_path (flat 0) 1
+      (
+        (12 10)
+        (
+          (vert - 22)
+        )
+      )
+    )
+    (draw_line_path (flat 0) 1
+      (
+        (12 22)
+        (
+          (bezier - (16.2 22) (19 20.333) (19 17))
+          (bezier - (14.8 17) (12 18.667) (12 22))
+          (close -)
+        )
+      )
+    )
+    (draw_line_path (flat 0) 1
+      (
+        (12 22)
+        (
+          (bezier - (7.8 22) (5 20.333) (5 17))
+          (bezier - (9.2 17) (12 18.667) (12 22))
+          (close -)
+        )
+      )
+    )
+  )
+)

@@ -1,0 +1,30 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+  )
+  (
+    (draw_line_path (flat 0) 1
+      (
+        (5 16)
+        (
+          (vert - 9)
+          (horiz - 19)
+          (vert - 2)
+          (horiz - 5)
+          (line - 19 16)
+          (horiz - 12)
+        )
+        (5 16)
+        (
+          (line - 12 23)
+          (vert - 16)
+        )
+        (5 16)
+        (
+          (horiz - 12)
+        )
+      )
+    )
+  )
+)

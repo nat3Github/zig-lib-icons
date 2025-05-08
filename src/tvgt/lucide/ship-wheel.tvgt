@@ -2,10 +2,9 @@
   (24 24 1/1024 u8888 default)
   (
     (1 0 1)
-    (0 0 0)
   )
   (
-(outline_fill_path (flat 1) (flat 0) 1 ((12 4) ((arc_circle - 8 false false (12 20))(arc_circle - 8 false false (12 4)))))    (outline_fill_path (flat 1) (flat 0) 1
+(draw_line_path (flat 0) 1 ((12 4) ((arc_circle - 8 false false (12 20))(arc_circle - 8 false false (12 4)))))    (draw_line_path (flat 0) 1
       (
         (12 2)
         (
@@ -13,7 +12,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (19 5)
         (
@@ -21,7 +20,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (22 12)
         (
@@ -29,7 +28,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (19 19)
         (
@@ -37,7 +36,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (12 14.5)
         (
@@ -45,7 +44,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (10.23 13.77)
         (
@@ -53,7 +52,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (9.5 12)
         (
@@ -61,7 +60,7 @@
         )
       )
     )
-    (outline_fill_path (flat 1) (flat 0) 1
+    (draw_line_path (flat 0) 1
       (
         (10.23 10.23)
         (
@@ -69,5 +68,5 @@
         )
       )
     )
-(outline_fill_path (flat 1) (flat 0) 1 ((12 9.5) ((arc_circle - 2.5 false false (12 14.5))(arc_circle - 2.5 false false (12 9.5)))))  )
+(draw_line_path (flat 0) 1 ((12 9.5) ((arc_circle - 2.5 false false (12 14.5))(arc_circle - 2.5 false false (12 9.5)))))  )
 )

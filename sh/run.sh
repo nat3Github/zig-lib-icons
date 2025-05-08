@@ -4,8 +4,6 @@
 # Note: you must cd into icons and then run ./sh/run.sh
 
 # decls:
-# base_path="/Users/nat3/programming/zig/lib/icons"
-base_path=""
 path_src="src"
 path_tvgt="src/tvgt"
 path_tvg="src/tvg"
@@ -15,21 +13,30 @@ feather="feather"
 herooutline="heroicons/outline"
 herosolid="heroicons/solid"
 lucide="lucide"
+  
+arr=("$feather" "$herosolid" "$herooutline" "$lucide")
+
+#programs:
+CONVERTER_PATH="/Users/nat3/programming/zig/lib/tvg-sdk2/src/tools/svg2tvgt/bin/Debug/net8.0/svg2tvgt"
+TVGTEXT="/Users/nat3/programming/zig/lib/tvg-sdk2/zig-out/bin/tvg-text"
+
+svg2tvgt__() {
+    # wrapper for svg2tvg tool from https://github.com/TinyVG/sdk
+    $CONVERTER_PATH $1
+}
+
+tvgt2tvg__() {
+    # wrapper for tvgt conversion tool from https://github.com/TinyVG/sdk
+    $TVGTEXT -I tvgt $1 -O tvg
+}
+
 
 setup() {
   mkdir -p $path_tvg/"$1"
   mkdir -p $path_tvgt/"$1"
 }
 
-svg2tvgt__() {
-    # wrapper for svg2tvg tool from https://github.com/TinyVG/sdk
-    /Users/nat3/Apps/svg2tvg/bin/svg2tvgt $1
-}
 
-tvgt2tvg__() {
-    # wrapper for tvgt conversion tool from https://github.com/TinyVG/sdk
-    tvg-text -I tvgt $1 -O tvg
-}
 
 svg_conv() {
 # Loop through all SVG files in the current directory
@@ -112,7 +119,6 @@ zig_decl_svg () {
 }
 
 
-arr=("$feather" "$herosolid" "$herooutline" "$lucide")
 
 run() {
   for k in "${arr[@]}"; do

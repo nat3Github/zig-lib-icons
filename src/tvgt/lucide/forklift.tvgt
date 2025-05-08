@@ -1,0 +1,38 @@
+(tvg 1
+  (24 24 1/1024 u8888 default)
+  (
+    (1 0 1)
+  )
+  (
+    (draw_line_path (flat 0) 1
+      (
+        (12 12)
+        (
+          (horiz - 5)
+          (arc_ellipse - 2 2 0 false true (3 14))
+          (vert - 19)
+        )
+      )
+    )
+(draw_line_path (flat 0) 1 ((13 17) ((arc_circle - 2 false false (13 21))(arc_circle - 2 false false (13 17)))))(draw_line_path (flat 0) 1 ((5 17) ((arc_circle - 2 false false (5 21))(arc_circle - 2 false false (5 17)))))    (draw_line_path (flat 0) 1
+      (
+        (8 19)
+        (
+          (horiz - 11)
+        )
+        (16 2)
+        (
+          (vert - 19)
+          (horiz - 22)
+        )
+        (6 12)
+        (
+          (vert - 7)
+          (bezier - (6 5.9) (6.9 5) (8 5))
+          (horiz - 11)
+          (line - 16 10)
+        )
+      )
+    )
+  )
+)
