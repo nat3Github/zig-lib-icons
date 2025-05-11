@@ -3,4 +3,5 @@ zig-out
 #.gitignore
 src/ignore
 output
+test
 *.env

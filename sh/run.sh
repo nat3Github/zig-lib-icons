@@ -137,7 +137,7 @@ done
 }
 
 # echo $(zig_decl "feather" "myicon");
-# only_src_gen
-run
+only_src_gen
+# run
 
 

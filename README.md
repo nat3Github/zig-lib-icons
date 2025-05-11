@@ -14,6 +14,44 @@
 # usage in dvui:
 ```zig
 const icons = @import("icons")
+```
+test "convert to tvg and render" {
+    const svg2tvg = @import("svg2tvg");
+    const gpa = std.testing.allocator;
+    var arena = std.heap.ArenaAllocator.init(gpa);
+    defer arena.deinit();
+    const alloc = arena.allocator();
+
+    const Wrapper = struct {
+        width: i64,
+        height: i64,
+        img: *MyImage,
+        pub fn setPixel(self: *@This(), x: i64, y: i64, color: [4]u8) void {
+            const pix: MyPixel = .init_from_u8_slice(&color);
+            self.img.set_pixel(@intCast(x), @intCast(y), pix);
+        }
+    };
+
+    const width_and_height = 200;
+
+    var myImage = try MyImageType.init(alloc, width_and_height, width_and_height);
+    const my_svg_icon_data = icons.svg.feather.activity;
+
+    var w = std.ArrayList(u8).init(alloc);
+    try svg2tvg.tvg_from_svg(alloc, w.writer(), svg_bytes);
+
+    var image_wrapper = Wrapper{
+        .img = img,
+        .width = @intCast(img.get_width()),
+        .height = @intCast(img.get_height()),
+    };
+
+    var fb = std.io.fixedBufferStream(w.items);
+    try svg2tvg.renderStream(alloc, &image_wrapper, fb.reader(), .{});
+
+    ...
+}
+```
 
 // in dvui begin: for example for feather icon lib
   icon_browser(icons.feather, ...);

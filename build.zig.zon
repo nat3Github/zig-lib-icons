@@ -1,12 +1,16 @@
 .{
     .fingerprint = 0xa6a507ef9409c88,
-
     .name = .icons,
-
     .version = "0.0.0",
 
-    .dependencies = .{},
-
+    .dependencies = .{
+        .svg2tvg = .{
+            .path = "../svg2tvg",
+        },
+        .image = .{
+            .path = "../image",
+        },
+    },
     .paths = .{
         "assets",
         "build.zig",

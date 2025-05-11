@@ -1,8 +1,0 @@
-(tvg 1
-  (24 24 1/1024 u8888 default)
-  (
-    (1 0 1)
-  )
-  (
-(draw_line_path (flat 0) 1 ((6.5 4) ((arc_circle - 2.5 false false (6.5 9))(arc_circle - 2.5 false false (6.5 4)))))(draw_line_path (flat 0) 1 ((17.5 15) ((arc_circle - 2.5 false false (17.5 20))(arc_circle - 2.5 false false (17.5 15)))))  )
-)

@@ -16,6 +16,6 @@ pub const tvg = struct {
 };
 
 test "all" {
-    _ = tvg.feather.activity;
+    // _ = tvg.feather.activity;
     _ = svg.feather.activity;
 }
