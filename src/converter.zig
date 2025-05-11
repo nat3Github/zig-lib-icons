@@ -23,6 +23,7 @@ test "render icon tiles" {
     const arr = struct {
         pub const feathericons = icons.svg.feather;
         pub const lucide = icons.svg.lucide;
+        pub const entypo = icons.svg.entypo;
         pub const heroout = icons.svg.heroicons.outline;
         pub const herosol = icons.svg.heroicons.solid;
     };
@@ -46,7 +47,7 @@ test "render icon tiles" {
 }
 
 const debug = debug_idx != null;
-const debug_idx: ?usize = null; //null; //3;
+const debug_idx: ?usize = null; //1; //3;
 
 test "icon map" {
     if (!debug) return;
@@ -59,7 +60,7 @@ test "icon map" {
     const icon_width = 24 * 10;
     const wh = icon_width;
 
-    const T = icons.svg.heroicons.outline;
+    const T = icons.svg.entypo;
     const icon_idx = debug_idx.?;
     const idecls = @typeInfo(T).@"struct".decls;
     const iname = idecls[icon_idx].name;
@@ -73,8 +74,6 @@ test "icon map" {
         @panic("should not error");
     };
     defer alloc.free(tvg_bytes);
-
-    std.debug.print("{s}\n", .{tvg_bytes});
 
     var image_wrapper = ImageWrapper2{
         .img = &img,
@@ -114,7 +113,7 @@ fn render_icon_patch(
     const xi = index - yi * icons_n;
     var simg = img.sub_img(xi * dx, dx, yi * dx, dx);
     render_icon(&simg, alloc, svg_bytes) catch |e| {
-        std.log.warn("{}", .{e});
+        std.log.err("{}", .{e});
     };
 }
 fn render_icon(
@@ -136,6 +135,7 @@ fn render_icon(
 }
 
 test "convert all icon files" {
+    if (debug) return;
     const gpa = std.testing.allocator;
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -146,6 +146,7 @@ test "convert all icon files" {
         "heroicons/outline",
         "heroicons/solid",
         "lucide",
+        "entypo",
     };
 
     for (paths) |spath| {
@@ -169,6 +170,7 @@ test "convert all icon files" {
                 var ofile = try std.fs.cwd().createFile(opath, .{});
                 defer ofile.close();
                 const svgb = try file.readToEndAlloc(alloc, 1024 * 1024);
+                // std.log.warn("{s}", .{svgb});
                 const tvgb = try svg2tvg.tvg_from_svg(alloc, svgb, .{});
                 try ofile.writeAll(tvgb);
             }

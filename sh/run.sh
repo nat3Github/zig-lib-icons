@@ -13,8 +13,9 @@ feather="feather"
 herooutline="heroicons/outline"
 herosolid="heroicons/solid"
 lucide="lucide"
+entypo="entypo"
   
-arr=("$feather" "$herosolid" "$herooutline" "$lucide")
+arr=("$feather" "$herosolid" "$herooutline" "$lucide" "$entypo")
 
 #programs:
 CONVERTER_PATH="/Users/nat3/programming/zig/lib/tvg-sdk2/src/tools/svg2tvgt/bin/Debug/net8.0/svg2tvgt"
