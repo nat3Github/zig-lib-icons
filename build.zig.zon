@@ -17,6 +17,7 @@
         "assets",
         "build.zig",
         "build.zig.zon",
+        "update.zig",
         "src",
         "tvg",
         "tvgt",
