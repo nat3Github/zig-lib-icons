@@ -4,11 +4,13 @@
     .version = "0.0.0",
 
     .dependencies = .{
-        .svg2tvg = .{
-            .path = "../svg2tvg",
-        },
         .image = .{
-            .path = "../image",
+            .url = "git+https://github.com/nat3Github/zig-lib-image#73bbce55f9e31241167d38c95ccab173c358e4b6",
+            .hash = "image-0.0.0-FDpZou-lAACxPZzf2oAlvnS05DbLEdWZmsFkm9jJibmO",
+        },
+        .z2d = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#46b7fd9a147abbbd9603f5546dbdadbd8f50bdaf",
+            .hash = "z2d-0.6.2-j5P_HorvCgA77zuTJyQcBt0addhqcZ77jV4tsuhB5KQY",
         },
     },
     .paths = .{
