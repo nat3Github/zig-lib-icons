@@ -13,6 +13,11 @@ fn update_step(step: *std.Build.Step, _: std.Build.Step.MakeOptions) !void {
             .url = "https://github.com/nat3Github/zig-lib-z2d-dev-fork",
             .branch = "main",
         },
+        GitDependency{
+            // svg2tvg
+            .url = "https://github.com/nat3Github/zig-lib-svg2tvg",
+            .branch = "main",
+        },
     };
     try update.update_dependency(step.owner.allocator, deps);
 }
@@ -20,7 +25,7 @@ fn update_step(step: *std.Build.Step, _: std.Build.Step.MakeOptions) !void {
 pub fn build(b: *std.Build) void {
     const step = b.step("update", "update git dependencies");
     step.makeFn = update_step;
-    if (true) return;
+    // if (true) return;
 
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
