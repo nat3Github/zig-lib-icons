@@ -1,4 +1,4 @@
-# TVG Icons Ready to use in Zig
+# icons - TVG Icons Ready to use in Zig
 
 - iconst are mostly in svg
 - sometimes you need them in tvg (tiny vector graphics https://github.com/TinyVG/sdk)
