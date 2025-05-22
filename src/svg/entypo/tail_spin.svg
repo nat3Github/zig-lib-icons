@@ -1,0 +1,19 @@
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0px"
+     y="0px"
+     width="256"
+     height="256"
+     viewBox="0 0 256 256"
+     enable-background="new 0 0 256 256"
+     xml:space="preserve">
+    <g>
+        <g>
+            <path fill="#000000"
+                  d="M233.6,233.6C233.6,110.1,133.5,10,10,10" />
+            <path fill="#000000"
+                  d="M221.1,233.6c0,6.9,5.6,12.4,12.4,12.4s12.4-5.6,12.4-12.4s-5.6-12.4-12.4-12.4S221.1,226.7,221.1,233.6z" />
+        </g>
+    </g>
+</svg>
