@@ -9,7 +9,6 @@
 # status of this library
 
 - zig 0.14.0
-- conversion quality is unfortunatly bad
 
 # usage in dvui:
 ```zig
