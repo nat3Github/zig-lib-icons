@@ -13,8 +13,9 @@
             .hash = "z2d-0.6.2-j5P_Hj_6CgADmPGfSOzRwoWRJBS636ZlzEiz7PyN6gdz",
         },
         .svg2tvg = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#cfb369a1ff143fcc317ef1da621b240b10ba749a",
-            .hash = "svg2tvg-0.0.0-HpMZuRODBgCstCNdHCpUqiVtKaWs35OZHaHiDosvqbpl",
+            .path = "../svg2tvg",
+            // .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#cfb369a1ff143fcc317ef1da621b240b10ba749a",
+            // .hash = "svg2tvg-0.0.0-HpMZuRODBgCstCNdHCpUqiVtKaWs35OZHaHiDosvqbpl",
         },
     },
     .paths = .{
