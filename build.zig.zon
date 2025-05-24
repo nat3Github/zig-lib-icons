@@ -9,13 +9,12 @@
             .hash = "image-0.0.0-FDpZou-lAACxPZzf2oAlvnS05DbLEdWZmsFkm9jJibmO",
         },
         .z2d = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#e4e23a2f3ba3598c82848bf0f7b3ea80d7ac0cb2",
-            .hash = "z2d-0.6.2-j5P_Hj_6CgADmPGfSOzRwoWRJBS636ZlzEiz7PyN6gdz",
+            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#e21dd0e1b051b21d9b915651023790034c9f6247",
+            .hash = "z2d-0.6.3-pre-j5P_Hpr7CgDs92sCmKFFCBMASENBhbn0klrHEAJL_uDV",
         },
         .svg2tvg = .{
-            .path = "../svg2tvg",
-            // .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#cfb369a1ff143fcc317ef1da621b240b10ba749a",
-            // .hash = "svg2tvg-0.0.0-HpMZuRODBgCstCNdHCpUqiVtKaWs35OZHaHiDosvqbpl",
+            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#628e32e87e7a2f57493a4af1b70870877e461358",
+            .hash = "svg2tvg-0.0.0-HpMZuTN2BgAWaLEMONTjaMrPki2_9x6KJZtO4W7NNHh2",
         },
     },
     .paths = .{
