@@ -26,6 +26,7 @@ pub fn build(b: *std.Build) void {
     const step = b.step("update", "update git dependencies");
     step.makeFn = update_step;
     // if (true) return;
+    const step_convert = b.step("convert", "convert all icon svg sets to tvg");
 
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
@@ -62,4 +63,15 @@ pub fn build(b: *std.Build) void {
     }));
 
     b.step("test", "Run unit tests").dependOn(&tests.step);
+
+    const exe_converter = b.addExecutable(.{
+        .name = "svg - tvg auto converter",
+        .root_source_file = b.path("src/converter.zig"),
+        .optimize = optimize,
+        .target = target,
+    });
+    exe_converter.root_module.addImport("image", module_image);
+    exe_converter.root_module.addImport("svg2tvg", module_svg2tvg);
+    const exe_run = b.addRunArtifact(exe_converter);
+    step_convert.dependOn(&exe_run.step);
 }

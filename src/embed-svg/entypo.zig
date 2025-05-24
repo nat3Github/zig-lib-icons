@@ -245,6 +245,7 @@ pub const @"suitcase" = @embedFile("../svg/entypo/suitcase.svg");
 pub const @"sweden" = @embedFile("../svg/entypo/sweden.svg");
 pub const @"switch" = @embedFile("../svg/entypo/switch.svg");
 pub const @"tag" = @embedFile("../svg/entypo/tag.svg");
+pub const @"tail-spin" = @embedFile("../svg/entypo/tail-spin.svg");
 pub const @"tape" = @embedFile("../svg/entypo/tape.svg");
 pub const @"target" = @embedFile("../svg/entypo/target.svg");
 pub const @"thermometer" = @embedFile("../svg/entypo/thermometer.svg");

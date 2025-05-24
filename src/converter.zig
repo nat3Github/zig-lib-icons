@@ -7,8 +7,13 @@ const Allocator = std.mem.Allocator;
 const icons = @import("root.zig");
 const Image = @import("image");
 const svg2tvg = @import("svg2tvg");
-test "render icon tiles" {
-    if (debug) return;
+
+/// set a debug icon to generate only the icon when testing
+const debug_icon_bytes: ?[]const u8 = null; //icons.svg.entypo.@"tail-spin";
+
+const debug__ = debug_icon_bytes != null;
+test "icon tiles debugging" {
+    if (debug__) return;
     const gpa = std.testing.allocator;
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -46,11 +51,8 @@ test "render icon tiles" {
     }
 }
 
-const debug = debug_idx != null;
-const debug_idx: ?usize = null; //1; //3;
-
-test "icon map" {
-    if (!debug) return;
+test "single icon debugging" {
+    if (!debug__) return;
     const gpa = std.testing.allocator;
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
@@ -59,36 +61,12 @@ test "icon map" {
 
     const icon_width = 24 * 10;
     const wh = icon_width;
-
-    const T = icons.svg.entypo;
-    const icon_idx = debug_idx.?;
-    const idecls = @typeInfo(T).@"struct".decls;
-    const iname = idecls[icon_idx].name;
-    const icon_bytes = @field(T, iname);
-    std.debug.print("{s}\n", .{icon_bytes});
+    const svg_bytes = debug_icon_bytes.?;
+    std.debug.print("{s}\n", .{svg_bytes});
 
     var img = try Image.init(alloc, wh, wh);
-
-    const tvg_bytes = svg2tvg.tvg_from_svg(alloc, icon_bytes, .{}) catch |e| {
-        std.log.warn("conversion error: {}", .{e});
-        @panic("should not error");
-    };
-    defer alloc.free(tvg_bytes);
-
-    var image_wrapper = ImageWrapper2{
-        .img = &img,
-        .width = @intCast(img.get_width()),
-        .height = @intCast(img.get_height()),
-    };
-
-    var fb = std.io.fixedBufferStream(tvg_bytes);
-
-    try svg2tvg.renderStream(alloc, &image_wrapper, fb.reader(), .{ .use_z2d_for_stroke = false });
-
-    try render_icon(&img, alloc, icon_bytes);
-
-    try img.write_ppm_to_file(try std.fmt.allocPrint(alloc, "test/{s}.ppm", .{iname}));
-    std.debug.print("{s}", .{iname});
+    try render_icon(&img, alloc, svg_bytes);
+    try img.write_ppm_to_file(try std.fmt.allocPrint(alloc, "test/{s}.ppm", .{"debug_icon"}));
 }
 
 pub const ImageWrapper2 = struct {
@@ -134,9 +112,7 @@ fn render_icon(
     try svg2tvg.renderStream(alloc, &image_wrapper, fb.reader(), .{});
 }
 
-test "convert all icon files" {
-    if (debug) return;
-    const gpa = std.testing.allocator;
+fn convert_all_icon_files(gpa: Allocator) !void {
     var arena = std.heap.ArenaAllocator.init(gpa);
     defer arena.deinit();
     const alloc = arena.allocator();
@@ -177,4 +153,60 @@ test "convert all icon files" {
         }
         _ = arena.reset(.retain_capacity);
     }
+}
+
+pub fn main() !void {
+    var gpa = std.heap.DebugAllocator(.{}).init;
+    defer _ = gpa.deinit();
+    try convert_all_icon_files(gpa.allocator());
+}
+
+test "test2 z2d" {
+    var arena = std.heap.ArenaAllocator.init(std.testing.allocator);
+    defer arena.deinit();
+    const alloc = arena.allocator();
+    const z2d = svg2tvg.z2d;
+
+    var sfc = try z2d.Surface.initPixel(.{
+        .rgba = z2d.pixel.RGBA.fromClamped(1, 0, 1, 1),
+    }, alloc, 256, 256);
+    var ctx = z2d.Context.init(alloc, &sfc);
+    ctx.setSourceToPixel(.{ .rgba = z2d.pixel.RGBA.fromClamped(1, 1, 1, 1) });
+    try ctx.moveTo(219.00, 219.00);
+    try ctx.lineTo(219.00, 219.00);
+    try ctx.lineTo(217.92, 197.57);
+    try ctx.lineTo(214.74, 176.75);
+    try ctx.lineTo(209.58, 156.66);
+    try ctx.lineTo(202.53, 137.40);
+    try ctx.lineTo(193.70, 119.08);
+    try ctx.lineTo(183.20, 101.79);
+    try ctx.lineTo(171.13, 85.66);
+    try ctx.lineTo(157.61, 70.77);
+    try ctx.lineTo(142.72, 57.24);
+    try ctx.lineTo(126.58, 45.17);
+    try ctx.lineTo(109.30, 34.67);
+    try ctx.lineTo(90.97, 25.85);
+    try ctx.lineTo(71.71, 18.80);
+    try ctx.lineTo(51.62, 13.63);
+    try ctx.lineTo(30.81, 10.46);
+    try ctx.closePath();
+    try ctx.fill();
+    ctx.resetPath();
+
+    ctx.setSourceToPixel(.{ .rgba = z2d.pixel.RGBA.fromClamped(1, 0, 0, 1) });
+    try ctx.moveTo(219.00, 219.00);
+    try ctx.curveTo(
+        219.00,
+        103.22,
+        125.16,
+        9.38,
+        9.38,
+        9.38,
+    );
+    try ctx.stroke();
+    ctx.resetPath();
+
+    ctx.setSourceToPixel(.{ .rgba = z2d.pixel.RGBA.fromClamped(0, 1, 0, 1) });
+
+    try z2d.png_exporter.writeToPNGFile(sfc, "test/bug2.png", .{});
 }
