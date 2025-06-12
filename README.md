@@ -1,16 +1,19 @@
 # icons - TVG Icons Ready to use in Zig
 
-- iconst are mostly in svg
-- sometimes you need them in tvg (tiny vector graphics https://github.com/TinyVG/sdk)
-- this lib provides the converted tvg files
+- most icons are in svg format, tvg is still niche but a much simpler alternative vector graphic format
+- [tiny vector graphics](https://github.com/TinyVG/sdk) is used in projecty like [dvui](https://github.com/david-vanderson/dvui)
+- this library provides converted tvg files of popular OSS icon libraries which can be used in zig directly like feather.@"icon-name"
 - each tvg icon is embedded via @embedFile(...)
-- use like: feather.@"icon-name"
+- currently zig 0.14.0
+- icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg)
 
-# status of this library
+## icon libraries included:
 
-- zig 0.14.0
+- feather icons https://github.com/feathericons/feather
+- lucide [https://github.com/feathericons/feather](https://github.com/lucide-icons/lucide)
+- heroicons https://github.com/tailwindlabs/heroicons
 
-# usage in dvui:
+# usage (in dvui):
 ```zig
 const icons = @import("icons")
 ```
@@ -98,12 +101,6 @@ pub fn icon_browser(T: type, rect: *dvui.Rect, open_flag: *bool) !void {
     }
 }
 ```
-
-## icon libraries included:
-
-- feather icons https://github.com/feathericons/feather
-- lucide [https://github.com/feathericons/feather](https://github.com/lucide-icons/lucide)
-- heroicons https://github.com/tailwindlabs/heroicons
 
 # Licensing
 
