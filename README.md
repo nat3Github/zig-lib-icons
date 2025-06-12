@@ -5,7 +5,7 @@
 - this library provides converted tvg files of popular OSS icon libraries which can be used in zig directly like feather.@"icon-name"
 - each tvg icon is embedded via @embedFile(...)
 - currently zig 0.14.0
-- icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg)
+- icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg) and shell scripts
 
 ## icon libraries included:
 
