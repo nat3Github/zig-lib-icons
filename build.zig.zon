@@ -9,12 +9,13 @@
             .hash = "image-0.0.0-FDpZou-lAACxPZzf2oAlvnS05DbLEdWZmsFkm9jJibmO",
         },
         .z2d = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#e21dd0e1b051b21d9b915651023790034c9f6247",
+            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#03425c05a20d35cbeb62e0d17c60f890634bbf8f",
             .hash = "z2d-0.6.3-pre-j5P_Hpr7CgDs92sCmKFFCBMASENBhbn0klrHEAJL_uDV",
         },
         .svg2tvg = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#628e32e87e7a2f57493a4af1b70870877e461358",
-            .hash = "svg2tvg-0.0.0-HpMZuTN2BgAWaLEMONTjaMrPki2_9x6KJZtO4W7NNHh2",
+            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#1270a0a2cb1db50ab2af194cc61c1765a4ba2ea2",
+            .hash = "svg2tvg-0.0.0-HpMZuXJ2BgALJIYWtnsxmixpd32PnxQ2Iu9ISEZYzV1-",
+            .lazyDependency = true,
         },
     },
     .paths = .{
