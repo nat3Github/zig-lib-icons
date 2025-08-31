@@ -1,0 +1,33 @@
+.{
+    .fingerprint = 0xa6a507ef9409c88,
+    .name = .icons,
+    .version = "0.0.0",
+    .minimum_zig_version = "0.14.1",
+
+    .dependencies = .{
+        .update_tool = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-update#bc4cb4abf4de818606452e52e316cd6ed3b29675",
+            .hash = "update_tool-0.0.0-MwAI-eoZAAAQ2ud9gn9neQM5EC8PKpF6_HRmRfPF9-OL",
+        },
+        .image = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-image#73bbce55f9e31241167d38c95ccab173c358e4b6",
+            .hash = "image-0.0.0-FDpZou-lAACxPZzf2oAlvnS05DbLEdWZmsFkm9jJibmO",
+        },
+        .z2d = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-z2d-dev-fork#03425c05a20d35cbeb62e0d17c60f890634bbf8f",
+            .hash = "z2d-0.6.3-pre-j5P_Hpr7CgDs92sCmKFFCBMASENBhbn0klrHEAJL_uDV",
+        },
+        .svg2tvg = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#1270a0a2cb1db50ab2af194cc61c1765a4ba2ea2",
+            .hash = "svg2tvg-0.0.0-HpMZuXJ2BgALJIYWtnsxmixpd32PnxQ2Iu9ISEZYzV1-",
+            .lazyDependency = true,
+        },
+    },
+    .paths = .{
+        "assets",
+        "build.zig",
+        "build.zig.zon",
+        "update.zig",
+        "src",
+    },
+}
