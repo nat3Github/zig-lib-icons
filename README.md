@@ -4,7 +4,7 @@
 - [tiny vector graphics](https://github.com/TinyVG/sdk) is used in projects like [dvui](https://github.com/david-vanderson/dvui)
 - this library provides converted tvg files of popular OSS icon libraries which can be used in zig directly like feather.@"icon-name"
 - each tvg icon is embedded via @embedFile(...)
-- currently zig 0.14.0
+- currently zig 0.15.1
 - icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg) and shell scripts
 
 ## icon libraries included:
@@ -14,15 +14,17 @@
 - heroicons https://github.com/tailwindlabs/heroicons
 
 # usage (in dvui):
+
 ```zig
 const icons = @import("icons")
 ```
+
 test "convert to tvg and render" {
-    const svg2tvg = @import("svg2tvg");
-    const gpa = std.testing.allocator;
-    var arena = std.heap.ArenaAllocator.init(gpa);
-    defer arena.deinit();
-    const alloc = arena.allocator();
+const svg2tvg = @import("svg2tvg");
+const gpa = std.testing.allocator;
+var arena = std.heap.ArenaAllocator.init(gpa);
+defer arena.deinit();
+const alloc = arena.allocator();
 
     const Wrapper = struct {
         width: i64,
@@ -52,7 +54,9 @@ test "convert to tvg and render" {
     try svg2tvg.renderStream(alloc, &image_wrapper, fb.reader(), .{});
 
     ...
+
 }
+
 ```
 
 // in dvui begin: for example for feather icon lib

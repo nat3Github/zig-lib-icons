@@ -1,8 +1,8 @@
 .{
     .fingerprint = 0xa6a507ef9409c88,
     .name = .icons,
-    .version = "0.0.0",
-    .minimum_zig_version = "0.14.1",
+    .version = "0.1.0",
+    .minimum_zig_version = "0.15.1",
     .dependencies = .{},
     .paths = .{
         "build.zig",
