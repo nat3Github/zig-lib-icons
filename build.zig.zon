@@ -2,12 +2,32 @@
     .fingerprint = 0xa6a507ef9409c88,
     .name = .icons,
     .version = "0.1.0",
-    .minimum_zig_version = "0.15.1",
-    .dependencies = .{},
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        // Lazy: only fetched when the consumer (or our demo) actually
+        // references it.  Keeps the core "icons" module dvui-free for
+        // graphics-agnostic users.
+        .dvui = .{
+            .url = "git+https://github.com/david-vanderson/dvui#7c4c3c6551a3b037b8d4fb7a9877ff2ffb0d9816",
+            .hash = "dvui-0.4.0-AQFJmSf-4QATghfkfbf6Rn-uis8hK46wEj8eNh5t9PZJ",
+            .lazy = true,
+        },
+        // SVG -> TVG conversion + direct TVG -> dvui renderer.
+        // Pinned to `dvui-render` branch which exposes the `svg2tvg_dvui`
+        // module used by the demo. Lazy: fetched on `zig build demo` or
+        // `zig build convert`.
+        .svg2tvg = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg#5492cfba69b7abac85491ab1958233ccb2c7f67e",
+            .hash = "svg2tvg-0.0.0-HpMZuf8SBwCYk-mmIj19kOhjCDCOueqEdqRFlwtpAkNB",
+            .lazy = true,
+        },
+    },
     .paths = .{
         "build.zig",
         "build.zig.zon",
         "update.zig",
         "src",
+        "demo",
+        "tools",
     },
 }
