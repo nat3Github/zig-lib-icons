@@ -1,5 +1,6 @@
 .zig-cache
 zig-out
+zig-pkg
 #.gitignore
 src/ignore
 output

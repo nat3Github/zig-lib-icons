@@ -3,31 +3,13 @@
     .name = .icons,
     .version = "0.1.0",
     .minimum_zig_version = "0.16.0",
-    .dependencies = .{
-        // Lazy: only fetched when the consumer (or our demo) actually
-        // references it.  Keeps the core "icons" module dvui-free for
-        // graphics-agnostic users.
-        .dvui = .{
-            .url = "git+https://github.com/david-vanderson/dvui?ref=zig16-dev#5eed56c7c26e7aa407d1314d2b8b59c9ff895e15",
-            .hash = "dvui-0.5.0-dev-AQFJmW4J3wCwnqU0rlxL2WSARyDhNFxPqWda6AE4mp6f",
-            .lazy = true,
-        },
-        // SVG -> TVG conversion + direct TVG -> dvui renderer.
-        // Pinned to `dvui-render` branch which exposes the `svg2tvg_dvui`
-        // module used by the demo. Lazy: fetched on `zig build demo` or
-        // `zig build convert`.
-        .svg2tvg = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg?ref=zig16#228a57074da9e1c3a5b05d8f3d52480df3b3eecd",
-            .hash = "svg2tvg-0.0.0-HpMZuft3BgBNbc4uEpaOsLx5hBxVU2LYjvGrhoYisi55",
-            .lazy = true,
-        },
-    },
+    // No dependencies: the core "icons" module is just embedded data files.
+    // The demo and the SVG->TVG converter live in their own packages
+    // (demo/ and tools/) and pull in dvui / svg2tvg themselves.
+    .dependencies = .{},
     .paths = .{
         "build.zig",
         "build.zig.zon",
-        "update.zig",
         "src",
-        "demo",
-        "tools",
     },
 }

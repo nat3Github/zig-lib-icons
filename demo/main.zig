@@ -11,7 +11,7 @@ const c = SDLBackend.c;
 const icons = @import("icons");
 const icons_dvui = @import("svg2tvg_dvui");
 
-var gpa_instance = std.heap.GeneralPurposeAllocator(.{}){};
+var gpa_instance = std.heap.DebugAllocator(.{}){};
 const gpa = gpa_instance.allocator();
 
 const Demo = struct {
@@ -53,7 +53,12 @@ pub fn main() !void {
 
     defer if (gpa_instance.deinit() != .ok) @panic("Memory leak on exit!");
 
+    var threaded = std.Io.Threaded.init(gpa, .{});
+    defer threaded.deinit();
+    const io = threaded.io();
+
     var backend = try SDLBackend.initWindow(.{
+        .io = io,
         .allocator = gpa,
         .size = .{ .w = 1100.0, .h = 720.0 },
         .min_size = .{ .w = 600.0, .h = 400.0 },

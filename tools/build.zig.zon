@@ -1,0 +1,18 @@
+.{
+    .fingerprint = 0xbf231a8aedfe6ea2,
+    .name = .icons_convert,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        // SVG -> TVG conversion library.
+        .svg2tvg = .{
+            .url = "git+https://github.com/nat3Github/zig-lib-svg2tvg?ref=zig16#228a57074da9e1c3a5b05d8f3d52480df3b3eecd",
+            .hash = "svg2tvg-0.0.0-HpMZuft3BgBNbc4uEpaOsLx5hBxVU2LYjvGrhoYisi55",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "convert.zig",
+    },
+}
