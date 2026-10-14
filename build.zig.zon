@@ -2,7 +2,7 @@
     .fingerprint = 0xa6a507ef9409c88,
     .name = .icons,
     .version = "0.1.0",
-    .minimum_zig_version = "0.16.0",
+    .minimum_zig_version = "0.17.0",
     // No dependencies: the core "icons" module is just embedded data files.
     // The demo and the SVG->TVG converter live in their own packages
     // (demo/ and tools/) and pull in dvui / svg2tvg themselves.

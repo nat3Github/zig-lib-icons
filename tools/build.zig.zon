@@ -2,7 +2,7 @@
     .fingerprint = 0xbf231a8aedfe6ea2,
     .name = .icons_convert,
     .version = "0.1.0",
-    .minimum_zig_version = "0.16.0",
+    .minimum_zig_version = "0.17.0",
     .dependencies = .{
         // SVG -> TVG conversion library.
         .svg2tvg = .{
