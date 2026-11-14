@@ -4,7 +4,8 @@
 - [tiny vector graphics](https://github.com/TinyVG/sdk) is used in projects like [dvui](https://github.com/david-vanderson/dvui)
 - this library provides converted tvg files of popular OSS icon libraries which can be used in zig directly like feather.@"icon-name"
 - each tvg icon is embedded via @embedFile(...)
-- icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg) and shell scripts
+- currently zig 0.17.0
+- icons are autoconverted using [svg2tvg](https://github.com/nat3Github/zig-lib-svg2tvg) via a zig build step
 
 ## icon libraries included:
 
@@ -114,6 +115,7 @@ pub fn icon_browser(T: type, rect: *dvui.Rect, open_flag: *bool) !void {
 
 # Contribution
 
-- there is a automated shell script to convert and generate zig code
-- modify it to generate the new files, modify root.zig
+- `cd tools && zig build convert` converts all SVGs in `src/svg` to `src/tvg` and regenerates `src/embed-*`
+- to test a local svg2tvg checkout: `cd tools && zig build convert --fork=../../lib-svg2tvg`
+- new icon sets: add them to `icon_sets` in `tools/convert.zig` and to `src/root.zig`
 - i will only accept icon libraries licensed similar to MIT

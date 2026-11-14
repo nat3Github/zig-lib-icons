@@ -93,8 +93,8 @@ fn genEmbed(
     for (names.items) |name| {
         const line = try std.fmt.allocPrint(
             alloc,
-            "pub const @\"{s}\" = @embedFile(\"../{s}/{s}/{s}.{s}\");\n",
-            .{ name, ext, set, name, ext },
+            "pub const {f} = @embedFile(\"../{s}/{s}/{s}.{s}\");\n",
+            .{ std.zig.fmtId(name), ext, set, name, ext },
         );
         try buf.appendSlice(alloc, line);
     }
