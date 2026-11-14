@@ -21,7 +21,10 @@ fn flattenSet(alloc: Allocator, set: []const u8) ![]u8 {
     return out;
 }
 
-fn convertSet(alloc: Allocator, io: Io, root: Dir, set: []const u8) !void {
+const SetSize = struct { files: usize = 0, svg: usize = 0, tvg: usize = 0 };
+
+fn convertSet(alloc: Allocator, io: Io, root: Dir, set: []const u8) !SetSize {
+    var size: SetSize = .{};
     const svg_dir_path = try std.fmt.allocPrint(alloc, "src/svg/{s}", .{set});
     const tvg_dir_path = try std.fmt.allocPrint(alloc, "src/tvg/{s}", .{set});
 
@@ -43,7 +46,32 @@ fn convertSet(alloc: Allocator, io: Io, root: Dir, set: []const u8) !void {
         const tvg_bytes = try svg2tvg.tvg_from_svg(alloc, svg_bytes, .{});
 
         try root.writeFile(io, .{ .sub_path = out_path, .data = tvg_bytes });
+        size.files += 1;
+        size.svg += svg_bytes.len;
+        size.tvg += tvg_bytes.len;
     }
+    return size;
+}
+
+/// Writes SIZE.txt: real byte sums per set (on-disk block usage hides the difference).
+fn writeSizeTable(alloc: Allocator, io: Io, root: Dir, sizes: []const SetSize) !void {
+    var buf: std.ArrayList(u8) = .empty;
+    const row = "{s:<20} {d:>6} {d:>12} {d:>12} {d:>7.2}x\n";
+    try buf.print(alloc, "{s:<20} {s:>6} {s:>12} {s:>12} {s:>8}\n", .{ "set", "files", "svg bytes", "tvg bytes", "ratio" });
+    var total: SetSize = .{};
+    for (icon_sets, sizes) |set, s| {
+        std.debug.assert(s.tvg > 0);
+        try buf.print(alloc, row, .{ set, s.files, s.svg, s.tvg, ratio(s) });
+        total.files += s.files;
+        total.svg += s.svg;
+        total.tvg += s.tvg;
+    }
+    try buf.print(alloc, row, .{ "total", total.files, total.svg, total.tvg, ratio(total) });
+    try root.writeFile(io, .{ .sub_path = "SIZE.txt", .data = buf.items });
+}
+
+fn ratio(s: SetSize) f64 {
+    return @as(f64, @floatFromInt(s.svg)) / @as(f64, @floatFromInt(s.tvg));
 }
 
 fn lessThanStr(_: void, a: []const u8, b: []const u8) bool {
@@ -116,10 +144,12 @@ pub fn main() !void {
 
     const root = Dir.cwd();
 
-    for (icon_sets) |set| {
-        try convertSet(alloc, io, root, set);
+    var sizes: [icon_sets.len]SetSize = undefined;
+    for (icon_sets, &sizes) |set, *size| {
+        size.* = try convertSet(alloc, io, root, set);
         try genEmbed(alloc, io, root, set, .svg);
         try genEmbed(alloc, io, root, set, .tvg);
         std.log.info("done {s}", .{set});
     }
+    try writeSizeTable(alloc, io, root, &sizes);
 }
