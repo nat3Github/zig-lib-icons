@@ -6,8 +6,8 @@
     .dependencies = .{
         // SVG -> TVG conversion library.
         .svg2tvg = .{
-            .url = "git+https://github.com/nat3Github/zig-lib-svg-tvg?ref=main#8ee81fc942d52ed9b17ea1661efc47b7764489ba",
-            .hash = "svg2tvg-0.0.0-HpMZuQzjBQB-tWj9fp2Sx8mwEOvsE2OBFxuCndKbSN7X",
+            .url = "git+https://github.com/nat3Github/zig-lib-svg-tvg?ref=main#3d0546e204e9075fa6b0981872cbb3344868a58c",
+            .hash = "svg2tvg-0.0.0-HpMZuQXfBwD_iM6j2mgwRSG4PaWtMOIot4OyU2ZJm-cj",
         },
     },
     .paths = .{
