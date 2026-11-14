@@ -246,7 +246,6 @@ pub const sweden = @embedFile("../tvg/entypo/sweden.tvg");
 pub const @"switch" = @embedFile("../tvg/entypo/switch.tvg");
 pub const tag = @embedFile("../tvg/entypo/tag.tvg");
 pub const @"tail-spin" = @embedFile("../tvg/entypo/tail-spin.tvg");
-pub const tail_spin = @embedFile("../tvg/entypo/tail_spin.tvg");
 pub const tape = @embedFile("../tvg/entypo/tape.tvg");
 pub const target = @embedFile("../tvg/entypo/target.tvg");
 pub const thermometer = @embedFile("../tvg/entypo/thermometer.tvg");

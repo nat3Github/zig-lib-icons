@@ -28,6 +28,8 @@ fn convertSet(alloc: Allocator, io: Io, root: Dir, set: []const u8) !SetSize {
     const svg_dir_path = try std.fmt.allocPrint(alloc, "src/svg/{s}", .{set});
     const tvg_dir_path = try std.fmt.allocPrint(alloc, "src/tvg/{s}", .{set});
 
+    // Start from an empty dir so TVGs whose SVG was removed don't linger.
+    try root.deleteTree(io, tvg_dir_path);
     try root.createDirPath(io, tvg_dir_path);
 
     var svg_dir = try root.openDir(io, svg_dir_path, .{ .iterate = true });
