@@ -117,5 +117,4 @@ pub fn icon_browser(T: type, rect: *dvui.Rect, open_flag: *bool) !void {
 
 - `cd tools && zig build convert` converts all SVGs in `src/svg` to `src/tvg` and regenerates `src/embed-*`
 - to test a local svg2tvg checkout: `cd tools && zig build convert --fork=../../lib-svg2tvg`
-- new icon sets: add them to `icon_sets` in `tools/convert.zig` and to `src/root.zig`
-- i will only accept icon libraries licensed similar to MIT
+- to include icon libraries they shall be "MIT" licensed
