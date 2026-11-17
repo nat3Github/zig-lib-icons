@@ -1,6 +1,6 @@
 # icons - TVG Icons Ready to use in Zig
 
-- icons come in the svg format, [tvg](https://tinyvg.tech/) is a simpler vector graphic standard
+- icons come in the svg format, [tvg](https://tinyvg.tech/) was developed as a simpler vector graphic standard alternative.
 - tvg saves space and the simplification makes it easier to render.
 - the current binary size difference is in SIZE.txt
 - [tiny vector graphics](https://github.com/TinyVG/sdk) is used in projects like [dvui](https://github.com/david-vanderson/dvui)
