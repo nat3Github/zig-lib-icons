@@ -1,6 +1,8 @@
 # icons - TVG Icons Ready to use in Zig
 
-- most icons are in svg format, [tvg](https://tinyvg.tech/) is still niche but a much simpler alternative vector graphic format
+- icons come in the svg format, [tvg](https://tinyvg.tech/) is a simpler vector graphic standard
+- tvg saves space and the simplification makes it easier to render.
+- the current binary size difference is in SIZE.txt
 - [tiny vector graphics](https://github.com/TinyVG/sdk) is used in projects like [dvui](https://github.com/david-vanderson/dvui)
 - this library provides converted tvg files of popular OSS icon libraries which can be used in zig directly like feather.@"icon-name"
 - each tvg icon is embedded via @embedFile(...)
