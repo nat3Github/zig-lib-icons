@@ -1,7 +1,7 @@
 set                   files    svg bytes    tvg bytes    ratio
-feather                 287       108761        27297    3.98x
-heroicons/outline       324       207024        60499    3.42x
-heroicons/solid         324       359427       109218    3.29x
-lucide                 1591       621779       204699    3.04x
-entypo                  285       262586       125848    2.09x
-total                  2811      1559577       527561    2.96x
+feather                 287       108761        18570    5.86x
+heroicons/outline       324       207024        39944    5.18x
+heroicons/solid         324       359427        63008    5.70x
+lucide                 1591       621779       143275    4.34x
+entypo                  285       262586        91227    2.88x
+total                  2811      1559577       356024    4.38x
