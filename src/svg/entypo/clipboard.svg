@@ -1,5 +1,8 @@
-<svg height="1000px" width="700px" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <path d="M630 100c18.667 0 35 7 49 21c14 14 21 30.333 21 49c0 0 0 760 0 760c0 20 -7 36.667 -21 50c-14 13.333 -30.333 20 -49 20c0 0 -560 0 -560 0c-18.667 0 -35 -6.667 -49 -20c-14 -13.333 -21 -30 -21 -50c0 0 0 -760 0 -760c0 -18.667 7 -35 21 -49c14 -14 30.333 -21 49 -21c0 0 60 150 60 150c0 0 440 0 440 0c0 0 60 -150 60 -150m-100 100c0 0 -360 0 -360 0c0 0 -44 -100 -44 -100c0 0 108 0 108 0c0 0 36 -100 36 -100c0 0 160 0 160 0c0 0 36 100 36 100c0 0 110 0 110 0c0 0 -46 100 -46 100" />
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Clipboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<path d="M15.6,2l-1.2,3H5.6l-1.2-3C3.629,2,3,2.629,3,3.4V18.6c0,0.77,0.629,1.4,1.399,1.4h11.2c0.77,0,1.4-0.631,1.4-1.4V3.4
+	C17,2.629,16.369,2,15.6,2z M13.6,4l0.9-2h-2.181L11.6,0h-3.2L7.68,2H5.5l0.899,2H13.6z"/>
 </svg>

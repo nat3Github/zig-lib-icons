@@ -12,6 +12,7 @@
 - feather icons https://github.com/feathericons/feather
 - lucide [https://github.com/feathericons/feather](https://github.com/lucide-icons/lucide)
 - heroicons https://github.com/tailwindlabs/heroicons
+- entypo+ by Daniel Bruce https://www.entypo.com (via npm https://www.npmjs.com/package/entypo)
 
 # usage (in dvui):
 
@@ -112,9 +113,10 @@ pub fn icon_browser(T: type, rect: *dvui.Rect, open_flag: *bool) !void {
 - feather: MIT
 - lucide: ISC
 - heroicons: MIT
+- entypo+: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), Entypo+ pictograms by Daniel Bruce, www.entypo.com (TVG files are converted from the original SVGs)
 
 # Contribution
 
 - `cd tools && zig build convert` converts all SVGs in `src/svg` to `src/tvg` and regenerates `src/embed-*`
 - to test a local svg2tvg checkout: `cd tools && zig build convert --fork=../../lib-svg2tvg`
-- to include icon libraries they shall be "MIT" licensed
+- to include icon libraries they shall be "MIT" licensed (exception: entypo+, CC BY-SA 4.0)

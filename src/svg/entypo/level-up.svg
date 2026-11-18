@@ -1,5 +1,7 @@
-<svg height="1000px" width="850px" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <path d="M200 500c0 0 0 90 0 90c0 0 -200 -160 -200 -160c0 0 200 -170 200 -170c0 0 0 100 0 100c0 0 550 0 550 0c26.667 0 50 9.667 70 29c20 19.333 30 43 30 71c0 0 0 280 0 280c0 0 -140 0 -140 0c0 0 0 -240 0 -240c0 0 -510 0 -510 0c0 0 0 0 0 0" />
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Level_up" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<path d="M19,9v7h-3v-6H6v3L1,8.5L6,4v3h11C18.104,7,19,7.897,19,9z"/>
 </svg>

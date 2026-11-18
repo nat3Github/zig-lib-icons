@@ -1,5 +1,8 @@
-<svg height="1000px" width="1000px" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <path d="M250 660c0 0 272 0 272 0c0 0 128 140 128 140c0 0 -448 0 -448 0c-28 0 -51.667 -10 -71 -30c-19.333 -20 -29 -43.333 -29 -70c0 0 0 -302 0 -302c0 0 -102 0 -102 0c0 0 176 -198 176 -198c0 0 174 198 174 198c0 0 -100 0 -100 0c0 0 0 262 0 262c0 0 0 0 0 0m650 -60c0 0 100 0 100 0c0 0 -174 200 -174 200c0 0 -176 -200 -176 -200c0 0 102 0 102 0c0 0 0 -260 0 -260c0 0 -274 0 -274 0c0 0 -128 -140 -128 -140c0 0 450 0 450 0c26.667 0 50 9.667 70 29c20 19.333 30 43 30 71c0 0 0 300 0 300c0 0 0 0 0 0" />
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Retweet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<path d="M5,13V8h2L3.5,4L0,8h2v6c0,1.104,0.895,2,2,2h9.482l-2.638-3H5z M9.156,7L6.518,4H16c1.104,0,2,0.897,2,2v6h2l-3.5,4L13,12
+	h2V7H9.156z"/>
 </svg>
